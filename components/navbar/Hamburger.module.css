@@ -42,7 +42,7 @@
 }
 
 .navLink:hover {
-  @apply text-blue;
+  @apply text-aneesh;
 }
 
 .navLink:hover::after {

@@ -143,7 +143,6 @@ function EventBox({ title, description, src, link, id }) {
           </p>
           <a
             href={link}
-            target="_blank"
             className="flex w-[fit-content] rounded-full"
             rel="noreferrer"
           >

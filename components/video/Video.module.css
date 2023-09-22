@@ -50,22 +50,22 @@
 }
 
 .content {
-  @apply absolute w-full left-1/2 flex justify-center items-center flex-wrap;
+  @apply absolute w-full flex justify-center items-center flex-wrap;
   transform: translate(-50%, -50%);
   top: 40%;
   left: 50%;
   z-index: 55;
   @apply md:justify-center md:w-full;
-  @apply sm:static sm:transform-none sm:my-10 sm:px-3 sm:justify-start;
+  /* @apply sm:static sm:transform-none sm:my-5 sm:px-3 sm:justify-center; */
 }
 
 .content > h1 {
-  font-family: 'ActionComic';
+    font-family: 'ActionComic';
     background: url('https://i.pinimg.com/originals/64/f9/60/64f9607347a4a28fb88724520b796a41.gif')center center repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-right: 18px;
-    font-size: 7rem;
+    padding: 2.5rem;
+    font-size: 12rem;
     letter-spacing: 10px;
     margin: 0px;
     color: transparent;
@@ -78,48 +78,154 @@
     0px 0px 5px rgb(148,0,211);
 }
 
-/* .content > h1::before,
-.content > h1::after {
-  content: '';
-  position: absolute;
-  bottom: -11px;
-  left: 0%;
-  width: 100%;
-  background: #ffffff;
-  height: 11px;
-  opacity: 0.2;
+@media (max-width: 1360px) {
+  .video {
+    height: 90vh;
+  }
+
+  .content {
+    top: 40%;
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 2.3rem;
+    font-size: 11rem;
+  }
+
 }
 
-.content > h1:nth-of-type(1)::before,
-.content > h1:nth-of-type(1)::after {
-  -webkit-mask: url('/underline1.svg');
-  mask: url('/underline1.svg');
+
+@media (max-width: 1260px) {
+  .video {
+    height: 90vh;
+  }
+
+  .content {
+    top: 40%;
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 2rem;
+    font-size: 10rem;
+  }
+
 }
 
-.content > h1:nth-of-type(2)::before,
-.content > h1:nth-of-type(2)::after {
-  -webkit-mask: url('/underline2.svg');
-  mask: url('/underline2.svg');
+@media (max-width: 1260px) {
+  .video {
+    height: 85vh;
+  }
+
+  .content {
+    top: 40%;
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 1.7rem;
+    font-size: 8rem;
+  }
 }
 
-.content > h1:nth-of-type(3)::before,
-.content > h1:nth-of-type(3)::after {
-  -webkit-mask: url('/underline3.svg');
-  mask: url('/underline3.svg');
+
+@media (max-width: 940px) {
+  .video {
+    height: 75vh;
+  }
+
+  .content {
+    top: 40%;
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 1.5rem;
+    font-size: 7rem;
+  }
 }
 
-.content > h1::after {
-  width: 0;
-  opacity: 1;
-  transition: all 0.6s;
-  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+
+@media (max-width: 830px) {
+  .video {
+    height: 65vh;
+  }
+
+  .content {
+    top: 40%;
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 1.2rem;
+    font-size: 6rem;
+  }
 }
 
-.content > h1:hover::before,
-.content > h1:hover::after {
-  animation: moveMask 2s linear infinite;
+@media (max-width: 740px) {
+  .video {
+    height: 60vh;
+  }
+
+  .content {
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 1rem;
+    font-size: 5rem;
+  }
 }
 
-.content > h1:hover::after {
-  width: 100%;
-} */
+@media (max-width: 610px) {
+  .video {
+    height: 55vh;
+  }
+
+  .content {
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 0.7rem;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .video {
+    height: 50vh;
+  }
+
+  .content {
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 0.5rem;
+    font-size: 3rem;
+  }
+
+}
+
+@media (max-width: 390px) {
+  .video {
+    height: 45vh;
+  }
+
+  .content {
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    padding: 0.2rem;
+    font-size: 2rem;
+  }
+
+}
+@media (max-width: 310px) {
+  .video {
+    height: 40vh;
+  }
+
+  .content {
+    top:40%;
+    text-align: center; /* Center align content on small screens */
+  }
+  .content > h1{
+    font-size: 1rem;
+  }
+
+}
