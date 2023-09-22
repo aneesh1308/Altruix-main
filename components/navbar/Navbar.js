@@ -35,7 +35,7 @@ function Navbar() {
 
       const currentScrollPos = window.pageYOffset;
       if (currentScrollPos > height + 60) {
-        navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+        navbar.style.borderBottom = '1px solid rgba(255, 68, 51,0.5)';
       } else {
         navbar.style.border = 'none';
       }
@@ -43,7 +43,7 @@ function Navbar() {
       if (prevScroll < currentScrollPos) {
         // navList.classList.add('fade-up');
         // title.classList.add('fade-up');
-        navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+        navbar.style.borderBottom = '1px solid rgba(255, 68, 51,0.5)';
       } else {
         navList.classList.remove('fade-up');
         title.classList.remove('fade-up');
@@ -72,9 +72,6 @@ function Navbar() {
         </Link>
         <Link href="/teams">
           <a className={styles.navLink}>TEAM</a>
-        </Link>
-        <Link href="/alumni">
-          <a className={styles.navLink}>ALUMNI</a>
         </Link>
         <Link href="/events">
           <a className={styles.navLink}>EVENTS</a>

@@ -19,25 +19,25 @@
   font-family: 'altruix';
   transition: 0.3s;
   transition: all 400ms ease-in-out;
-  @apply ml-6 text-5xl xl:hidden;
+  @apply ml-6 text-5xl ;
 }
 
 .navTitle > span {
   font-family: 'altruix';
   color: aliceblue;
-  @apply text-5xl xl:hidden;
+  @apply text-5xl;
 }
 
 .navTitle:hover span:nth-child(1) {
   margin-right: 20px;
   font-size: 150px;
-  @apply text-6xl xl:hidden;
+  @apply text-6xl;
 }
 
 .navTitle:hover span:nth-child(2) {
   margin-right: 20px;
   margin-left: 20px;
-  @apply text-6xl xl:hidden;
+  @apply text-6xl;
 }
 
 .navbarList {
@@ -45,7 +45,7 @@
   transition: all 300ms ease-in-out;
   @apply 2xl:gap-10;
   @apply xl:gap-4;
-  @apply lg:hidden;
+  @apply xl:hidden;
 }
 
 .navbarList > .navLink {
@@ -60,10 +60,38 @@
 }
 
 .humburgerMenu {
-  @apply cursor-pointer hidden lg:block;
+  @apply cursor-pointer hidden xl:block;
 }
 
 .logo {
   border: 5px;
-  border-color: #ff4433;
+  border-color: rgb(255, 68, 51);
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust the navbar for small screens */
+  .navbar {
+    padding: 10px; /* Example: Reduce padding for small screens */
+  }
+
+  /* Adjust the navigation title for small screens */
+  .navTitle {
+    font-size: 24px; /* Example: Reduce font size for small screens */
+  }
+  .navTitle > span{
+    font-size: 24px;
+  }
+  .navTitle:hover span:nth-child(1) {
+    margin-right: 10px;
+    @apply text-3xl;
+  }
+  
+  .navTitle:hover span:nth-child(2) {
+    margin-right: 10px;
+    margin-left: 10px;
+    @apply text-3xl;
+  }
+
+  /* Add more styles for other elements as needed */
 }

@@ -5,7 +5,7 @@
     padding-left: 50px ;
     --light_col: hsl(5, 100%, 60%);
     --letter_border:  hsl(5, 100%, 60%);
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 /* body {
@@ -15,7 +15,7 @@
 } */
 
 #main {
-    width: 98vw;
+    width: 95vw;
     margin: 2rem auto;
 }
 
@@ -60,17 +60,152 @@
     clear: both;
 }
 /* Add a media query for smaller screens (e.g., mobile) */
-@media (max-width: 768px) {
+/* Default styles for screens larger than or equal to 768px */
+/* ... (your existing CSS code) ... */
+
+/* Add a media query for smaller screens (e.g., mobile) */
+
+
+@media (max-width: 1200px) {
+    .countdown-root {
+        margin-top: 8rem;
+      padding-left: 20px; /* Adjust padding for smaller screens */
+      margin-bottom: 80px; /* Adjust margin for smaller screens */
+    }
+  
     #clock span {
-        font-size: 4vw;
-        padding: 8px;
-        width: calc(22% - 8px);     
-        margin: 8px;  
+      font-size: 4vw; /* Reduce font size for smaller screens */
+      padding: 8px;
+      width: calc(22% - 8px);
     }
+  
     #clock {
-        height: 9vh;
+      height: 9vh;
     }
-}
+    #display span {
+        margin-top: 0.5rem; /* Adjust margin for smaller screens *//* Reduce font size for smaller screens */
+      }
+  
+    #display span {
+      margin-top: 0.5rem; /* Adjust margin for smaller screens */
+      font-size: 3vw; /* Reduce font size for smaller screens */
+    }
+  
+    #display span:nth-child(1) {
+      left: 5%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(2) {
+      left: 25%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(3) {
+      left: 50%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(4) {
+      left: 75%; /* Adjust position for smaller screens */
+    }
+  
+    #sign_text {
+      font-size: 4vw; /* Reduce font size for smaller screens */
+      padding-top: 5rem; /* Adjust padding for smaller screens */
+    }
+  }
+@media (max-width: 768px) {
+    .countdown-root {
+        margin-top: 3rem;
+      padding-left: 20px; /* Adjust padding for smaller screens */
+      margin-bottom: 40px; /* Adjust margin for smaller screens */
+    }
+  
+    #clock span {
+      font-size: 4vw; /* Reduce font size for smaller screens */
+      padding: 8px;
+      width: calc(22% - 8px);
+    }
+  
+    #clock {
+      height: 9vh;
+    }
+    #display span {
+        margin-top: 0.5rem; /* Adjust margin for smaller screens *//* Reduce font size for smaller screens */
+      }
+  
+    #display span {
+      margin-top: 0.5rem; /* Adjust margin for smaller screens */
+      font-size: 4vw; /* Reduce font size for smaller screens */
+    }
+  
+    #display span:nth-child(1) {
+      left: 5%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(2) {
+      left: 25%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(3) {
+      left: 50%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(4) {
+      left: 75%; /* Adjust position for smaller screens */
+    }
+  
+    #sign_text {
+      font-size: 4vw; /* Reduce font size for smaller screens */
+      padding-top: 5rem; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 460px) {
+    .countdown-root {
+        margin-top: 0.5rem;
+      padding-left: 20px; /* Adjust padding for smaller screens */
+      margin-bottom: 40px; /* Adjust margin for smaller screens */
+    }
+  
+    #clock span {
+      font-size: 4vw; /* Reduce font size for smaller screens */
+      padding: 8px;
+      width: calc(22% - 8px);
+    }
+  
+    #clock {
+      height: 9vh;
+    }
+    #display span {
+        margin-top: 0.5rem; /* Adjust margin for smaller screens *//* Reduce font size for smaller screens */
+      }
+  
+    #display span {
+      margin-top: 0.5rem; /* Adjust margin for smaller screens */
+      font-size: 4vw; /* Reduce font size for smaller screens */
+    }
+  
+    #display span:nth-child(1) {
+      left: 5%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(2) {
+      left: 25%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(3) {
+      left: 50%; /* Adjust position for smaller screens */
+    }
+  
+    #display span:nth-child(4) {
+      left: 75%; /* Adjust position for smaller screens */
+    }
+  
+    #sign_text {
+      font-size: 4vw; /* Reduce font size for smaller screens */
+      padding-top: 5rem; /* Adjust padding for smaller screens */
+    }
+  }
+  
 
 #display span {
     text-align: center;
@@ -459,3 +594,54 @@ span.flip {
     padding-top: 12rem;
 }
 
+/* Default styles for screens larger than or equal to 768px */
+/* ... (your existing CSS code) ... */
+
+/* Add a media query for small devices (e.g., smartphones in portrait mode) */
+@media (max-width: 480px) {
+    .countdown-root {
+      padding-left: 10px; /* Adjust padding for small screens */
+      margin-bottom: 20px; /* Adjust margin for small screens */
+    }
+  
+    #clock span {
+      font-size: 3vw; /* Reduce font size for small screens */
+      padding: 5px; /* Adjust padding for small screens */
+      width: calc(33.33% - 10px); /* Adjust width for small screens */
+      margin-right: 9px; /* Adjust margin for small screens */
+    }
+  
+    #clock {
+      height: 6vh; /* Adjust height for small screens */
+    }
+    #display {
+        margin-top: 0.5rem;
+    }
+  
+    #display span { /* Adjust margin for small screens */
+      font-size: 2vw; /* Reduce font size for small screens */
+    }
+  
+    #display span:nth-child(1) {
+      left: 5%; /* Adjust position for small screens */
+    }
+  
+    #display span:nth-child(2) {
+      left: 30%; /* Adjust position for small screens */
+    }
+  
+    #display span:nth-child(3) {
+      left: 55%; /* Adjust position for small screens */
+    }
+  
+    #display span:nth-child(4) {
+      left: 80%; /* Adjust position for small screens */
+    }
+  
+    #sign_text {
+      font-size: 3vw; /* Reduce font size for small screens */
+      padding-top: 3rem; /* Adjust padding for small screens */
+    }
+    
+  }
+  

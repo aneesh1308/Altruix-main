@@ -67,7 +67,7 @@ function Video() {
           </>
         ) : (
           <>
-            <h1>Design.</h1>
+          <h1>AltruIx</h1>
           </>
         )}
       </div>
