@@ -16,16 +16,16 @@ function About() {
         <title>TECH FUSION ✨</title>
       </Head>
       <section className="container mx-auto px-16 sm:px-4 pt-4 md:pt-16 sm:pt-12">
+        <div className="my-16 w-full text-center">
+          <BottomGlitter h2="Tech Fushion" />
+          <h2 className="text-xl mt-3">
+            <BottomGlitter p="Unlocking Tech's Creative Secrets" />
+          </h2>
+        </div>
         <div className="mt-10 mb-6 sm:mt-8 sm:mb-4">
-          <div className="py-2 text-center">
-            <BottomGlitter text="TECH FUSION" />
-          </div>
           <div className="department">
             <div className="flex 2xl:flex-col xl:flex-col lg:flex-col-reverse md:flex-col-reverse sm:flex-col-reverse mt-6">
               <div className="w-4/6 5xl:w-full sm:w-full md:w-full lg:full xl:w-full 2xl:w-full">
-                <div className="py-2 mb-4 text-center">
-                  <BottomGlitter p=" Where coding gets quizzical and all magical !" />
-                </div>
                 <BottomGlitter p="Event Overview:" />
                 <p className="px-8 py-4 text-lg text-sky-400 !important">
                   Tech Fusion Quest is an unforgettable two-round experience
@@ -57,15 +57,15 @@ function About() {
                   rel="noreferrer"
                 >
                   <Button>
-                    <span className="z-50  block">Register</span>
+                    <span className=" z-50  block">Register</span>
                   </Button>
                 </a>
               </div>
 
-              <div className="ml-0 sm:mb-8 sm:ml-0 md:mb-8 md:ml-16 lg:mb-8 lg:ml-16 xl:mt-8 xl:ml-16 2xl:mt-8 2xl:ml-16">
+              <div className="ml-0  sm:mb-8 sm:ml-0 md:mb-8 md:ml-16 lg:mb-8 lg:ml-16 xl:mt-8 xl:ml-16 2xl:mt-8 2xl:ml-16">
                 <img
-                  className="pl-16 sm:pl-0"
-                  src="/events/TechFusion.jpg"
+                  className="pl-16 mt-8 sm:mt-0 sm:pl-0"
+                  src="/events/TechFusion.webp"
                   alt="ac"
                 />
               </div>
@@ -76,14 +76,14 @@ function About() {
           <BottomGlitter h2="Event Members" />
         </h2>
         <div className={Styles.cardContainer}>
-          {Symposium.slice(0, 4).map((item, index) => {
+          {Symposium.slice(32, 36).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
                 // <img src={item.imageSrc} alt="Team Member" />
-                imageSrc={`/teams/Event/${item.imageSrc}.jpg`}
+                imageSrc={`/teams/Event/${item.imageSrc}.webp`}
                 lazyImageSrc={`/teams/TechFusion/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />

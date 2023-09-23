@@ -23,34 +23,50 @@ function Teams() {
 
         <h2 className={Styles.postHead}> <BottomGlitter h2="HEADDD" /></h2>
         <div className={Styles.cardContainer}>
-          {Symposium.slice(0, 20).map((item, index) => {
+          {Symposium.slice(0, 6).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
+                imageSrc={`/teams/Event/${item.imageSrc}.webp`}
                 lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
           })}
         </div>
-        <h2 className={Styles.postHead}>Board Of Directors</h2>
+        <h2 className={Styles.postHead}>Committee Heads</h2>
         <div className={Styles.cardContainer}>
-          {Symposium.slice(0, 20).map((item, index) => {
+          {Symposium.slice(10, 22).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
+                imageSrc={`/teams/Event/${item.imageSrc}.webp`}
                 lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
           })}
         </div>
+        <h2 className={Styles.postHead}>Web Designers</h2>
+        <div className={Styles.cardContainer}>
+          {Symposium.slice(6, 10).map((item, index) => {
+            return (
+              <TeamCard
+                key={`${String(index)}-team`}
+                name={item.name}
+                title={item.title}
+                imageSrc={`/teams/Event/${item.imageSrc}.webp`}
+                lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+                socials={item.socials}
+              />
+            );
+          })}
+        </div>
+        
       </section>
     </Screen>
   );

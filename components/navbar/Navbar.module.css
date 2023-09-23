@@ -15,7 +15,7 @@
 }
 
 .navTitle {
-  color: hsl(5, 100%, 60%);
+  color: rgb(255, 68, 51);
   font-family: 'altruix';
   transition: 0.3s;
   transition: all 400ms ease-in-out;

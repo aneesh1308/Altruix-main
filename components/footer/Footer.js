@@ -87,18 +87,27 @@ function Footer() {
                 Contact Us
               </a>
             </Link>
-      </div>
+            <h3>+91 9486985820</h3>
+            <h3>+91 7871363570</h3>
+          </div>
 
-      <div className={Styles.copyrightBottom}>
-        <h6>
-          © {new Date().getFullYear()} ALTRUIX
-        </h6>
+          <div className={Styles.copyrightBottom}>
+            <h6>
+               © {new Date().getFullYear()} ALTRUIX
+            </h6>
 
-        <h6 className="flex items-center">
-          Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Artificial-inteL Hub
-        </h6>
-      </div>
-    </div>
+            {/* <h6 className="flex items-center"> */}
+              {/* Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Artificial-inteL Hub  */}
+              <a 
+                    href="mailto:projectpeee1234@gmail.com"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  ><h6 className="flex items-center">
+                  Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Artificial-inteL Hub </h6></a>
+            {/* </h6> */}
+          </div>
+        </div>
     </footer>
   );
 }
