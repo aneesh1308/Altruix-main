@@ -4,7 +4,6 @@ import Select from "react-select";
 import { Form, Button, Modal } from "react-bootstrap";
 import BottomGlitter from "../StyledText/BottomGlitter";
 import axios from "axios";
-import QRCode from "qrcode";
 
 const selectableList = [
   { text: 'Code N Tackle', value: 1 },
@@ -12,8 +11,6 @@ const selectableList = [
   { text: 'Riddle ARcade', value: 3 },
   { text: 'Film Fiesta', value: 4 },
 ];
-
-// const selectableList = ['Code N ==Tackle', 'Tech Fusion', 'Riddle ARcade', 'Film Fiesta']
 
 
 const customStyles = {
@@ -27,7 +24,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({});
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
-  const [qrCodeData, setQRCodeData] = useState(null); // Declare qrCodeData state variable
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -234,11 +231,6 @@ export default function ContactForm() {
         </button>
       </form>
       </div>
-      {qrCodeData && (
-        <div className="text-center my-4">
-          <img src={qrCodeData} alt="QR Code" />
-        </div>
-      )}
     </div>
     </>
 	);
