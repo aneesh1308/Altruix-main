@@ -19,15 +19,13 @@ function About() {
         <div className="my-16 w-full text-center">
           <BottomGlitter h2="Tech Fushion" />
           <h2 className="text-xl mt-3">
-            <BottomGlitter p=" Dive into the Magic of Kollywood" />
+            <BottomGlitter p="Where Programmers become magicians" />
           </h2>
         </div>
         <div className="mt-10 mb-6 sm:mt-8 sm:mb-4">
-          
           <div className="department">
             <div className="flex 2xl:flex-col xl:flex-col lg:flex-col-reverse md:flex-col-reverse sm:flex-col-reverse mt-6">
               <div className="w-4/6 5xl:w-full sm:w-full md:w-full lg:full xl:w-full 2xl:w-full">
-                
                 <BottomGlitter p="Event Overview:" />
                 <p className="px-8 py-4 text-lg text-sky-400 !important">
                   Tech Fusion Quest is an unforgettable two-round experience
@@ -58,10 +56,9 @@ function About() {
                   className="flex pt-8 w-[fit-content] rounded-full"
                   rel="noreferrer"
                 >
-
-                      <Button>
-                        <span className=" z-50  block">Register</span>
-                      </Button>
+                  <Button>
+                    <span className=" z-50  block">Register</span>
+                  </Button>
                 </a>
               </div>
 

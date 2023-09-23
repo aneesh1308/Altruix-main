@@ -32,7 +32,7 @@ function About() {
                     deliver it on the event day. Practice your delivery and be
                     ready to engage with the audience.
                   </p>
-                  <BottomGlitter p="Round 1 InnoScape :" />
+                  <BottomGlitter p="Round 1 : InnoScape (2 hr)" />
                   <ul className="px-8 py-2 text-lg list-disc p-5">
                     <li>Start with the PowerPoint presentation.</li>
                     <li>
@@ -56,7 +56,7 @@ function About() {
                       explaining their significance.
                     </li>
                   </ul>
-                  <BottomGlitter p="Round 2 InnoQuest :" />
+                  <BottomGlitter p="Round 2 : InnoQuest  (2 hr)" />
                   <ul className="px-8 py-3 text-lg list-disc p-5">
                     <li>
                       Teams within each group will engage in discussions,
