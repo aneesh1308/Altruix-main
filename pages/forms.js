@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Events from '../components/event/Events';
+// import Events from '../components/event/Events';
 import Screen from '../components/screen/Screen';
-import BottomGlitter from '../components/StyledText/BottomGlitter';
-import EventCard from '../components/event/EventGenral';
+// import BottomGlitter from '../components/StyledText/BottomGlitter';
+// import EventCard from '../components/event/EventGenral';
 import Form from '@/components/forms/Forms';
 
 function About() {

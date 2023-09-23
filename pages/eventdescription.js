@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Events from '../components/event/Events';
+// import Events from '../components/event/Events';
 import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 import EventCard from '../components/event/EventGenral';
