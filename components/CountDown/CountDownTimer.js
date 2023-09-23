@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import styles from  '../CountDown/CountDown.module.css';
+import styles from  "./CountDown.module.css";
 
-function CountdownTimer(deadline) {
+function CountdownTimer() {
     const [timer, setTimer] = useState({
         days: 0,
         hours: 0,
@@ -30,41 +30,29 @@ function CountdownTimer(deadline) {
         };
     }, []);
 
-    const animateClock = (span) => {
-        // Use state to apply styles instead of direct DOM manipulation
-        span.classList.add(styles['animated-span']);
-        setTimeout(() => {
-            span.classList.remove(styles['animated-span']);
-        }, 1000);
-    };
+  
 
     return (
         <div className={styles['countdown-root']}>
             <div id={styles.main}>
                 <div id={styles.clock}>
-                    <span style={{ animationName: 'animate__flipOutY' }} className={styles['countdown-span']}>
+                    <span  className={styles['countdown-span']}>
                         {timer.days}
                     </span> 
                     <span
-                        style={{
-                            animationName: 'animate__flipOutY',
-                        }}
+
                         className={styles['countdown-span']}
                     >
                         {timer.hours}
                     </span>
                     <span
-                        style={{
-                            animationName: 'animate__flipOutY',
-                        }}
+                        
                         className={styles['countdown-span']}
                     >
                         {timer.minutes}
                     </span>
                     <span
-                        style={{
-                            animationName: 'animate__flipOutY',
-                        }}
+                        
                         className={styles['countdown-span']}
                     >
                         {timer.seconds}

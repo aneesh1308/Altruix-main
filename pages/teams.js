@@ -29,7 +29,7 @@ function Teams() {
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
+                imageSrc={`/teams/Event/${item.imageSrc}.webp`}
                 lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
