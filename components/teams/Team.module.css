@@ -50,7 +50,7 @@
 }
 
 .postHead {
-  @apply text-5xl mb-14 mt-16 font-extrabold md:text-center md:pl-0 sm:mt-12;
+  @apply text-center text-5xl mb-14 mt-16 font-extrabold md:text-center md:pl-0 sm:mt-12;
 }
 
 @keyframes animate {

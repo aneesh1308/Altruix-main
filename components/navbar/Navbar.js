@@ -73,9 +73,7 @@ function Navbar() {
         <Link href="/teams">
           <a className={styles.navLink}>TEAM</a>
         </Link>
-        <Link href="/alumni">
-          <a className={styles.navLink}>ALUMNI</a>
-        </Link>
+       
         <Link href="/events">
           <a className={styles.navLink}>EVENTS</a>
         </Link>
@@ -87,7 +85,6 @@ function Navbar() {
         </Link>
         <a
           href="/forms"
-          // target="_blank"
           className="flex rounded-full"
           rel="noreferrer"
         >
@@ -95,7 +92,7 @@ function Navbar() {
             style={{ border: 'none' }}
             className="bg-primary-light text-primary"
           >
-            <span style={SpanStyle}>Join Us</span>
+            <span style={SpanStyle}>Register</span>
           </Button>
         </a>
       </div>

@@ -85,11 +85,7 @@ function Sidebar({ isMounted, unmount }) {
             Team
           </a>
         </Link>
-        <Link href="/alumni">
-          <a className={styles.navLink} onClick={unmount}>
-            Alumni
-          </a>
-        </Link>
+        
         <Link href="/contact">
           <a className={styles.navLink} onClick={unmount}>
             Contact Us
@@ -107,7 +103,6 @@ function Sidebar({ isMounted, unmount }) {
         </Link>
         <a
           href="https://docs.google.com/forms/d/1eOZsO1X6qmqyS48nEw43RJnOhwEBuAvXpXZXMtOOLaY/viewform?edit_requested=true"
-          target="_blank"
           className="flex rounded-full"
           rel="noreferrer"
         >
@@ -115,7 +110,7 @@ function Sidebar({ isMounted, unmount }) {
             style={{ border: 'none' }}
             className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
           >
-            <span style={SpanStyle}>Join Us</span>
+            <span style={SpanStyle}>Register</span>
           </Button>
         </a>
       </div>
