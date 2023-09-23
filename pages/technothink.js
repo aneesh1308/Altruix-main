@@ -5,18 +5,12 @@ import BottomGlitter from '../components/StyledText/BottomGlitter';
 function About() {
     return (
       <Screen>
-        <section className="container mx-auto px-1 pt-4 md:pt-16 sm:pt-12">
-          <div className="mt-10 mb-6 sm:mt-8 sm:mb-4">
-            <div className="py-2 text-center">
-              <BottomGlitter text="TECHO THINK" />
-            </div>
-            <div className="department">
-              <div className="flex 2xl:flex-col xl:flex-col lg:flex-col-reverse md:flex-col-reverse sm:flex-col-reverse mt-6">
-                <div className="w-4/6 5xl:w-full sm:w-full md:w-full lg:full xl:w-full 2xl:w-full">
-                  <div className="py-2 mb-4 text-center">
-                    <BottomGlitter p=" Where coding gets quizzical and all magical !" />
-                  </div>
-
+        <section className="container mx-auto px-16 sm:px-4 pt-4 md:pt-16 sm:pt-12">
+          <div className="my-16 w-full text-center">
+            <BottomGlitter h2="Techno Think " />
+            <h2 className="text-xl mt-3">
+              <BottomGlitter p=" Where coding gets quizzical and all magical !" />
+            </h2>
                   <p className="px-8 py-2 text-lg text-sky-400 !important">
                     Techno Think is an exciting and dynamic event that brings
                     together innovators, creators, and enthusiasts from various
@@ -25,6 +19,12 @@ function About() {
                     participants to present their work, exchange ideas, and
                     engage in meaningful discussions.
                   </p>
+          </div>
+          <div className="mt-10 mb-2 sm:mt-8 sm:mb-4">
+            <div className="department">
+              <div className="flex 2xl:flex-col xl:flex-col lg:flex-col-reverse md:flex-col-reverse sm:flex-col-reverse mt-6">
+                <div className="w-4/6 5xl:w-full sm:w-full md:w-full lg:full xl:w-full 2xl:w-full">
+
                   <BottomGlitter p="Preliminary Round :" />
                   <p className="px-8 py-4 text-lg pb-4 text-sky-400 !important">
                     Check the submission guidelines provided and submit your
@@ -95,7 +95,7 @@ function About() {
 
                 <div className="ml-0 sm:mb-8 sm:ml-0 md:mb-8 md:ml-16 lg:mb-8 lg:ml-16 xl:mt-8 xl:ml-16 2xl:mt-8 2xl:ml-16">
                   <img
-                    className="pl-16 sm:pl-0"
+                    className="pl-16 mt-16 sm:mt-0 sm:pl-0"
                     src="/events/codentackle.jpg"
                     alt="abc"
                   />

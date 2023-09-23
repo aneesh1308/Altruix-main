@@ -46,21 +46,10 @@ function Design() {
         </div>
         <div className={Styles.contentContainer}>
           <div className={Styles.content}>
-            <h2>Websites and Platform</h2>
-            <p>
-              We design projects of different complexity and size. No matter if
-              it is a simple single-page website or a complex admin panel with
-              numerous dashboards - we make it visually pleasing, consistent,
-              and user-friendly.
-            </p>
+            <h2>Tech-Fusion</h2>
           </div>
           <div className={Styles.content}>
-            <h2>Mobile Applications</h2>
-            <p>
-              We don’t simply design beautiful interfaces but craft them in
-              accordance with each platforms’ guidelines to make the use of our
-              app intuitive.
-            </p>
+            <h2>Code-N-Tackle</h2>
           </div>
         </div>
       </div>
@@ -98,20 +87,10 @@ function Development() {
         </div>
         <div className={Styles.contentContainer}>
           <div className={Styles.content}>
-            <h2>Website</h2>
-            <p>
-              We create web projects tailored exclusively with industry scales,
-              be it a landing page, a complex web app to automate our processes
-              or a high-load platform with sound backend architecture.
-            </p>
+            <h2>Flim Festa</h2>
           </div>
           <div className={Styles.content}>
-            <h2>Native/Hybrid Apps</h2>
-            <p>
-              We build custom Android mobile apps using Java(Kotlin) and
-              multiple cross platform (IoS and Andorid) mobile apps using React
-              Native and Flutter.
-            </p>
+            <h2>Riddle ARcade</h2>
           </div>
         </div>
       </div>
