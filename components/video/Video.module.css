@@ -6,7 +6,7 @@
 .video {
   @apply relative;
   height: 90vh;
-  @apply sm:h-auto;
+  /* @apply sm:h-auto; */
 }
 
 .designVideoContainer {

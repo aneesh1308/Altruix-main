@@ -6,7 +6,7 @@ function About() {
   return (
     <Screen>
      
-      <section className="container mx-auto px-16 pt-4 md:pt-16 sm:pt-12">
+      <section className="container mx-auto px-16 sm:px-4 pt-4 md:pt-16 sm:pt-12">
         <div className="mt-20 mb-6 sm:mt-8 sm:mb-4">
           <BottomGlitter text="RIDDLE ARCADE" />
           <div className="department">
@@ -29,7 +29,7 @@ function About() {
                   rel="noreferrer"
                 >
                   <Button>
-                    <span className="z-50  block">Register</span>
+                    <span className="z-50 block">Register</span>
                   </Button>
                 </a>
               </div>

@@ -6,7 +6,7 @@ import BottomGlitter from '../components/StyledText/BottomGlitter';
 function About() {
   return (
     <Screen>
-      <section className="container mx-auto px-1 pt-4 md:pt-16 sm:pt-12">
+      <section className="container mx-auto px-16 sm:px-4 pt-4 md:pt-16 sm:pt-12">
         <div className="mt-10 mb-6 sm:mt-8 sm:mb-4">
           <div className="py-2 text-center">
             <BottomGlitter h2="FILM FIESTA" />

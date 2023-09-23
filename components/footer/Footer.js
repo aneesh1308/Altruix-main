@@ -4,83 +4,101 @@ import Styles from './Footer.module.css';
 
 function Footer() {
   return (
-    <footer className={`${Styles.footer} container-70`}>
+    <footer className= "container-70">
       <div className="py-12 mt-20 sm:mt-4 md:mt-12">
-        <h4 className="text-2xl mb-10 pl-3">Contacts</h4>
         <BottomGlitter text="Get In Touch" />
       </div>
 
       <div className={Styles.linksContainer}>
-        <div className="flex-2 md:flex-1">
-          <div className="mb-3 flex flex-col">
-            <h3 className="text-2xl">Write</h3>
-            <h4 className="text-lg font-extralight">
-              <a href="mailto:hnccbits@gmail.com">hnccbits@gmail.com</a>
-            </h4>
+        {/* <div className='flex-wrap'> */}
+          <div >
+            <iframe className="w-full mb-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.2700429687116!2d80.04044376427917!3d12.82581866628666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f70d79722631%3A0x49afcd4648f94894!2sSRM%20Valliammai%20Engineering%20College!5e0!3m2!1sen!2sin!4v1695450243417!5m2!1sen!2sin" height="350px" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div> 
+          <div className="flex mr-2 md:mx-4 sm:mx-0 sm:mt-8">
+            <div className='flex flex-col'>
+              <div>
+                  <h2 className="text-2xl text-aneesh font-bold">Other Pages</h2>
+                  <a
+                    href="https://srmvalliammai.ac.in/"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    SRM-VEC
+                  </a>
+                  <Link href="/events">
+                    <a className="pl-1 block text-lg my-1 font-extralight">Events</a>
+                  </Link>
+                  <Link href="/about">
+                    <a className="pl-1 block text-lg my-1 font-extralight">About</a>
+                  </Link>
+                  <Link href="/teams">
+                    <a className="pl-1 block text-lg my-1 font-extralight">Teams</a>
+                  </Link>
+              </div>
+              <br/>
+              <div>
+                  <h2 className="text-2xl text-aneesh font-bold">Social Media</h2>
+                  <a
+                    href="https://www.instagram.com/altruix_2k23/"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.instagram.com/altruix_2k23/"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Facebook
+                  </a>
+                  <a
+                    href="https://www.instagram.com/altruix_2k23/"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                  <a 
+                    href="mailto:altruix2k23@gmail.com"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    altruix2k23@gmail.com
+                  </a>
+              </div>
+            </div>
           </div>
-          <div className="my-3 flex flex-col">
-            <h3 className="text-2xl">Meet</h3>
-            <h4 className="text-lg font-extralight">
-              BIT, Sindri <br />
-              Dhanbad-828123 <br />
-              Jharkhand, India
-            </h4>
-          </div>
-        </div>
-        <div className="flex-4 md:flex-1 md:mx-4 sm:mx-0 sm:mt-8">
-          <h3 className="text-2xl">Other Pages</h3>
-          <Link href="/events">
-            <a className="pl-1 block text-lg my-1 font-extralight">Events</a>
-          </Link>
-          <a
-            href="https://blog.hnccbits.com"
-            className="pl-1 block text-lg my-1 font-extralight"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </a>
-          <a
-            href="https://bitsindri.ac.in"
-            className="block pl-1 text-lg my-1 font-extralight"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            BIT Sindri
-          </a>
-        </div>
-        <div className="flex-4 md:flex-1 sm:mt-8">
-          <h3 className="text-2xl">Get Help</h3>
-          <a
-            href="https://docs.google.com/forms/d/1eOZsO1X6qmqyS48nEw43RJnOhwEBuAvXpXZXMtOOLaY/closedform"
-            className="block pl-1 text-lg my-1 font-extralight"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Join Us
-          </a>
-          <Link href="/faqs">
-            <a className="block pl-1 text-lg my-1 font-extralight">FAQs</a>
-          </Link>
-          <Link href="/contact">
-            <a className="pl-1 block text-lg my-1 font-extralight">
-              Contact Us
-            </a>
-          </Link>
-        </div>
+          <div className="flex flex-col sm:mt-8 ">
+            <h2 className="text-2xl text-aneesh font-bold">Get Help</h2>
+            <Link href="/forms">
+              <a className="pl-1 block text-lg my-1 font-extralight">Join us</a>
+            </Link>
+            <Link href="/faqs">
+              <a className="block pl-1 text-lg my-1 font-extralight">FAQs</a>
+            </Link>
+            <Link href="/contact">
+              <a className="pl-1 block text-lg my-1 font-extralight">
+                Contact Us
+              </a>
+            </Link>
       </div>
 
       <div className={Styles.copyrightBottom}>
         <h6>
-          © {new Date().getFullYear()} Hackathon and Coding Club. All rights
-          reserved.
+          © {new Date().getFullYear()} ALTRUIX
         </h6>
 
         <h6 className="flex items-center">
-          Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by HnCC
-          Team.
+          Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Artificial-inteL Hub
         </h6>
       </div>
+    </div>
     </footer>
   );
 }

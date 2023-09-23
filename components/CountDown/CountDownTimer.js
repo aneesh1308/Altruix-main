@@ -20,7 +20,7 @@ function CountdownTimer(deadline) {
             });
         }
 
-        const deadline = new Date('October 07, 2023 12:00:00');
+        const deadline = new Date('October 07, 2023 8:00:00');
         const timerInterval = setInterval(() => {
             updateTimer(deadline);
         }, 1000);
