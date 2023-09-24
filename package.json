@@ -16,6 +16,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
+    "emailjs": "^4.0.3",
     "googleapis": "^126.0.1",
     "html-to-image": "^1.11.11",
     "html2canvas": "^1.4.1",
