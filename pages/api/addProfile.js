@@ -47,9 +47,9 @@ export default async (req, res) => {
       });
     const savedProfile = await newProfile.save();
     
-    // const jsonString = JSON.stringify(savedProfile._id);
-    // const payload = { data: jsonString };
-    // const token = jwt.encode(payload, process.env.JWT_KEY);
+    const jsonString = JSON.stringify(savedProfile._id);
+    const payload = { data: jsonString };
+    const token = jwt.encode(payload, process.env.JWT_KEY);
     
     // const decodedPayload = jwt.decode(token, process.env.JWT_KEY);
     // console.log('Decrypted (JWT):', decodedPayload.data);
@@ -71,11 +71,11 @@ export default async (req, res) => {
       collegeName: savedProfile.collegeName,
       collegeRegistrationNumber: savedProfile.collegeRegistrationNumber,
       eventInterest: savedProfile.eventInterest,
-      // token :"https://chart.googleapis.com/chart?chs=450x450&cht=qr&chl="+token,
+      token :"https://chart.googleapis.com/chart?chs=450x450&cht=qr&chl="+token,
       _id:savedProfile._id,
       createdAt:savedProfile.createdAt
   };
-console.log(emailData)
+  return res.status(201).json({ message: "Detail emailData successfully!!" ,data :emailData});
   const compiledEmailTemplate = await emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
     return emailData[key] || match;
 });
