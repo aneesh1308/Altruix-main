@@ -5,13 +5,20 @@ import ProfileModel from "@/models/ProfileModel";
 import nodemailer from 'nodemailer';
 import qr from 'qrcode';
 import jwt from 'jwt-simple';
+import puppeteer from 'puppeteer';
 import connectDB from "@/utils/connectDB";
-import html2pdf from 'html-pdf-node';
 
 const fs = require('fs');
 const path = require('path');
 
-
+async function generateQRCode(data) {
+  try {
+    const qrCodeImage = await qr.toDataURL(data);
+    return qrCodeImage;
+  } catch (error) {
+    throw error;
+  }
+}
 
 export default async (req, res) => {
   await connectDB();
@@ -79,25 +86,18 @@ export default async (req, res) => {
   //   return emailData[key] || match;
   // });
 
-
-  // try {
-  //   const executablePath = chromium.executablePath
-  //   const browser = await puppeteer.launch({
-  //     args: chromium.args,
-  //     executablePath
-  //   });
-
-  //   const page = await browser.newPage();
-  //   await page.setContent(EmailDocTemplate);
-  //   const pdfBuffer = await page.pdf();
-  //   await browser.close();
-  // } catch (error) {
-  //   return res.status(201).json({ message: error});
+  // try{
+  //   const browser = await puppeteer.launch();
+  // const page = await browser.newPage();
+  // await page.setContent(EmailDocTemplate);
+  // const pdfBuffer = await page.pdf();
+  // await browser.close();
+  // } catch(err) {
+  //   console.error('Synchronous error:', error);
   // }
-
-   
+    // Define the email content
     const mailDetails = {
-      from: 'ALTRUIX <'+ 'altruix2k23@gmail.com'+'>',
+      from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
       to: savedProfile.email, // Replace with the recipient's email address
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
@@ -109,15 +109,17 @@ export default async (req, res) => {
       //   },
       // ]
     };
-    
-    await mailTransporter.sendMail(mailDetails, (err, info) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(info);
-      }
-    });
-    
+    await new Promise((resolve, reject) => {
+      mailTransporter.sendMail(mailDetails, (err, info) => {
+        if (err) {
+          console.error(err);
+          reject(err);
+        } else {
+          console.log("err");
+          resolve(info);
+        }
+      });
+    });
     
     
       return res.status(201).json({ message: "Detail Added successfully!!" ,data :savedProfile});
