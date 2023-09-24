@@ -54,17 +54,13 @@ export default async (req, res) => {
     // const decodedPayload = jwt.decode(token, process.env.JWT_KEY);
     // console.log('Decrypted (JWT):', decodedPayload.data);
 
-    try {
-      let mailTransporter = nodemailer.createTransport({
+    let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
           user: "altruix2k23@gmail.com",
           pass: "mjnaxbetzmvqzmup"
         }
       });
-    return res.status(201).json({ message: "mail test  sended" });
-    } catch(err){
-      return res.status(201).json({ message: "mail test not sended" });
     }
     const emailData = {
       name: savedProfile.Name,
@@ -79,13 +75,13 @@ export default async (req, res) => {
       createdAt:savedProfile.createdAt
   };
 
-  const compiledEmailTemplate = emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
-      return emailData[key] || match;
-  });
+  // const compiledEmailTemplate = emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
+  //     return emailData[key] || match;
+  // });
 
-  const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
-    return emailData[key] || match;
-  });
+  // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
+  //   return emailData[key] || match;
+  // });
 
   // try{
   //   const browser = await puppeteer.launch();
@@ -98,11 +94,11 @@ export default async (req, res) => {
   // }
     // Define the email content
     const mailDetails = {
-      from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
+      from: 'ALTRUIX <'+ 'altruix2k23@gmail.com'+'>',
       to: savedProfile.email, // Replace with the recipient's email address
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
-      html: compiledEmailTemplate,
+      // html: compiledEmailTemplate,
       // attachments: [
       //   {
       //     filename: 'ticket.pdf',
