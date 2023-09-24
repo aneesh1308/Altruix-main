@@ -109,9 +109,9 @@ export default async (req, res) => {
       // Attempt to send the email
       mailTransporter.sendMail(mailDetails, (error, info) => {
         if (error) {
-          console.error('Error sending email:', error);
+          return res.status(201).json({ message: "mail not sended" });
         } else {
-          console.log('Email sent successfully:', info.response);
+          return res.status(201).json({ message: "mail sended" });
         }
       });
     } catch (error) {
