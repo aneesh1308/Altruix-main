@@ -79,7 +79,7 @@ export default async (req, res) => {
   const compiledEmailTemplate = await emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
     return emailData[key] || match;
 });
-return res.status(201).json({ message: "Detail emailData successfully!!" ,data :compiledEmailTemplate});
+
 
 
   // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
@@ -102,12 +102,12 @@ return res.status(201).json({ message: "Detail emailData successfully!!" ,data :
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
       html: compiledEmailTemplate,
-      attachments: [
-        {
-          filename: 'ticket.pdf',
-          content: pdfBuffer,
-        },
-      ]
+      // attachments: [
+      //   {
+      //     filename: 'ticket.pdf',
+      //     content: pdfBuffer,
+      //   },
+      // ]
     };
     await new Promise((resolve, reject) => {
       mailTransporter.sendMail(mailDetails, (err, info) => {
