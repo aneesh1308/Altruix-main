@@ -102,7 +102,7 @@ function Sidebar({ isMounted, unmount }) {
           </a>
         </Link>
         <a
-          href="https://docs.google.com/forms/d/1eOZsO1X6qmqyS48nEw43RJnOhwEBuAvXpXZXMtOOLaY/viewform?edit_requested=true"
+          href="/forms"
           className="flex rounded-full"
           rel="noreferrer"
         >
