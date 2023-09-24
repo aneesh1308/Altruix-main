@@ -98,7 +98,7 @@ export default async (req, res) => {
   // await browser.close();
 
     let options = { format: 'A4' };
-    htmlToPdf.generatePdf(file, options)
+    await htmlToPdf.generatePdf(EmailDocTemplate, options)
     .then(pdfBuffer => {
       const mailDetails = {
         from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
@@ -113,17 +113,14 @@ export default async (req, res) => {
           },
         ]
       };
-      await new Promise((resolve, reject) => {
-        mailTransporter.sendMail(mailDetails, (err, info) => {
-          if (err) {
-            console.error(err);
-            reject(err);
-          } else {
-            console.log("err");
-            resolve(info);
-          }
-        });
-      });
+      
+      mailTransporter.sendMail(mailDetails, (err, info) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(info);
+        }
+      });
     })
 
     // Define the email content
