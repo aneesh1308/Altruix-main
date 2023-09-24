@@ -98,7 +98,7 @@ export default async (req, res) => {
   // await browser.close();
 
     let options = { format: 'A4' };
-    await htmlToPdf.generatePdf(EmailDocTemplate, options)
+    htmlToPdf.generatePdf(EmailDocTemplate, options)
     .then(pdfBuffer => {
 
       return res.status(201).json({ message: "Detail pdf successfully!!"});
