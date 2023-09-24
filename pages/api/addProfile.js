@@ -5,22 +5,13 @@ import ProfileModel from "@/models/ProfileModel";
 import nodemailer from 'nodemailer';
 import qr from 'qrcode';
 import jwt from 'jwt-simple';
-import chromium from "chrome-aws-lambda";
-import puppeteer from "puppeteer-core";
 import connectDB from "@/utils/connectDB";
 import html2pdf from 'html-pdf-node';
 
 const fs = require('fs');
 const path = require('path');
 
-async function generateQRCode(data) {
-  try {
-    const qrCodeImage = await qr.toDataURL(data);
-    return qrCodeImage;
-  } catch (error) {
-    throw error;
-  }
-}
+
 
 export default async (req, res) => {
   await connectDB();
@@ -84,25 +75,25 @@ export default async (req, res) => {
 
 
 
-  const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
-    return emailData[key] || match;
-  });
+  // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
+  //   return emailData[key] || match;
+  // });
 
 
-  try {
-    const executablePath = chromium.executablePath
-    const browser = await puppeteer.launch({
-      args: chromium.args,
-      executablePath
-    });
+  // try {
+  //   const executablePath = chromium.executablePath
+  //   const browser = await puppeteer.launch({
+  //     args: chromium.args,
+  //     executablePath
+  //   });
 
-    const page = await browser.newPage();
-    await page.setContent(EmailDocTemplate);
-    const pdfBuffer = await page.pdf();
-    await browser.close();
-  } catch (error) {
-    return res.status(201).json({ message: error});
-  }
+  //   const page = await browser.newPage();
+  //   await page.setContent(EmailDocTemplate);
+  //   const pdfBuffer = await page.pdf();
+  //   await browser.close();
+  // } catch (error) {
+  //   return res.status(201).json({ message: error});
+  // }
 
    
     const mailDetails = {
@@ -111,12 +102,12 @@ export default async (req, res) => {
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
       html: compiledEmailTemplate,
-      attachments: [
-        {
-          filename: 'ticket.pdf',
-          content: pdfBuffer,
-        },
-      ]
+      // attachments: [
+      //   {
+      //     filename: 'ticket.pdf',
+      //     content: pdfBuffer,
+      //   },
+      // ]
     };
     
     await mailTransporter.sendMail(mailDetails, (err, info) => {
