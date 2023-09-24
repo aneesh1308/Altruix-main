@@ -100,6 +100,9 @@ export default async (req, res) => {
     let options = { format: 'A4' };
     await htmlToPdf.generatePdf(EmailDocTemplate, options)
     .then(pdfBuffer => {
+
+      return res.status(201).json({ message: "Detail pdf successfully!!"});
+
       const mailDetails = {
         from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
         to: savedProfile.email, // Replace with the recipient's email address
