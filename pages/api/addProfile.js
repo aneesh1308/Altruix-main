@@ -47,14 +47,14 @@ export default async (req, res) => {
         eventInterest: req.body.eventInterest,
       });
     const savedProfile = await newProfile.save();
-      
+    
     const jsonString = JSON.stringify(savedProfile._id);
     const payload = { data: jsonString };
     const token = jwt.encode(payload, process.env.JWT_KEY);
     
     // const decodedPayload = jwt.decode(token, process.env.JWT_KEY);
     // console.log('Decrypted (JWT):', decodedPayload.data);
-
+    console.log(token);
     let mailTransporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -62,7 +62,7 @@ export default async (req, res) => {
         pass: process.env.MAIL_PASS
       }
     });
-
+    console.log("mailTransporter",mailTransporter);
     const emailData = {
       name: savedProfile.Name,
       profilePath: 'https://altruix2k23.tech/profile/'+savedProfile._id,
@@ -89,7 +89,7 @@ export default async (req, res) => {
   await page.setContent(EmailDocTemplate);
   const pdfBuffer = await page.pdf();
   await browser.close();
-
+  console.log("pdfBuffer");
     // Define the email content
     const mailDetails = {
       from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
@@ -104,6 +104,7 @@ export default async (req, res) => {
         },
       ]
     };
+    console.log("mailDetails");
     mailTransporter.sendMail(mailDetails);
     
       return res.status(201).json({ message: "Detail Added successfully!!" ,data :savedProfile});
