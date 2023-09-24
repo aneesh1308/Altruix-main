@@ -7,6 +7,7 @@ import qr from 'qrcode';
 import jwt from 'jwt-simple';
 import puppeteer from 'puppeteer';
 import connectDB from "@/utils/connectDB";
+import html2pdf from 'html-pdf-node';
 
 const fs = require('fs');
 const path = require('path');
@@ -87,15 +88,18 @@ export default async (req, res) => {
   });
 
 
-  const browser = await puppeteer.launch({ defaultViewport: null,
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
-  const page = await browser.newPage();
-  await page.setContent(EmailDocTemplate);
-  const pdfBuffer = await page.pdf();
-  await browser.close();
- 
+  // const browser = await puppeteer.launch({ defaultViewport: null,
+  //   headless: true,
+  //   args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  // });
+  // const page = await browser.newPage();
+  // await page.setContent(EmailDocTemplate);
+  // const pdfBuffer = await page.pdf();
+  // await browser.close();
+
+    let options = { format: 'A4' };
+    const pdfBuffer = await  html2pdf.generatePdf(EmailDocTemplate, options)
+
     // Define the email content
     const mailDetails = {
       from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
