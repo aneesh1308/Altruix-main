@@ -54,14 +54,15 @@ export default async (req, res) => {
     // const decodedPayload = jwt.decode(token, process.env.JWT_KEY);
     // console.log('Decrypted (JWT):', decodedPayload.data);
 
-    let mailTransporter = nodemailer.createTransport({
+    
+      let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
           user: "altruix2k23@gmail.com",
           pass: "mjnaxbetzmvqzmup"
         }
       });
-    }
+   
     const emailData = {
       name: savedProfile.Name,
       profilePath: 'https://altruix2k23.tech/profile/'+savedProfile._id,
@@ -94,7 +95,7 @@ export default async (req, res) => {
   // }
     // Define the email content
     const mailDetails = {
-      from: 'ALTRUIX <'+ 'altruix2k23@gmail.com'+'>',
+      from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
       to: savedProfile.email, // Replace with the recipient's email address
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
