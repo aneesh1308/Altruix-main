@@ -98,33 +98,36 @@ export default async (req, res) => {
   // await browser.close();
 
     let options = { format: 'A4' };
-    const pdfBuffer = await  html2pdf.generatePdf(EmailDocTemplate, options)
+    htmlToPdf.generatePdf(file, options)
+    .then(pdfBuffer => {
+      const mailDetails = {
+        from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
+        to: savedProfile.email, // Replace with the recipient's email address
+        subject: 'Successfully register Altruix',
+        text: 'ticket as been attached with the mail kindly download it.',
+        html: compiledEmailTemplate,
+        attachments: [
+          {
+            filename: 'ticket.pdf',
+            content: pdfBuffer,
+          },
+        ]
+      };
+      await new Promise((resolve, reject) => {
+        mailTransporter.sendMail(mailDetails, (err, info) => {
+          if (err) {
+            console.error(err);
+            reject(err);
+          } else {
+            console.log("err");
+            resolve(info);
+          }
+        });
+      });
+    })
 
     // Define the email content
-    const mailDetails = {
-      from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
-      to: savedProfile.email, // Replace with the recipient's email address
-      subject: 'Successfully register Altruix',
-      text: 'ticket as been attached with the mail kindly download it.',
-      html: compiledEmailTemplate,
-      attachments: [
-        {
-          filename: 'ticket.pdf',
-          content: pdfBuffer,
-        },
-      ]
-    };
-    await new Promise((resolve, reject) => {
-      mailTransporter.sendMail(mailDetails, (err, info) => {
-        if (err) {
-          console.error(err);
-          reject(err);
-        } else {
-          console.log("err");
-          resolve(info);
-        }
-      });
-    });
+    
     
     
       return res.status(201).json({ message: "Detail Added successfully!!" ,data :savedProfile});
