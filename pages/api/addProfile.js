@@ -75,11 +75,11 @@ export default async (req, res) => {
       _id:savedProfile._id,
       createdAt:savedProfile.createdAt
   };
-  return res.status(201).json({ message: "Detail emailData successfully!!" ,data :emailData});
+  
   const compiledEmailTemplate = await emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
     return emailData[key] || match;
 });
-console.log(compiledEmailTemplate)
+return res.status(201).json({ message: "Detail emailData successfully!!" ,data :compiledEmailTemplate});
 
 
   // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
