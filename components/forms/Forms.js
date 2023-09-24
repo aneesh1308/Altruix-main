@@ -63,16 +63,10 @@ export default function ContactForm() {
     const selectedOptionTexts = selectedOptions.map((option) =>
       selectableList.find((item) => item.value === option.value)?.text
     );
-    console.log(selectedOptionTexts)
-    setFormData({
-      ...formData,
-      "eventInterest": selectedOptionTexts,
-    });
     const newData = {
       ...formData,
       "eventInterest": selectedOptionTexts,
     }
-    console.log(newData)
     axios
       .post("/api/addProfile", newData) 
       .then((response) => {
