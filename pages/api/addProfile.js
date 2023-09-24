@@ -5,7 +5,8 @@ import ProfileModel from "@/models/ProfileModel";
 import nodemailer from 'nodemailer';
 import qr from 'qrcode';
 import jwt from 'jwt-simple';
-import puppeteer from 'puppeteer';
+import chromium from "chrome-aws-lambda";
+import puppeteer from "puppeteer-core";
 import connectDB from "@/utils/connectDB";
 import html2pdf from 'html-pdf-node';
 
@@ -89,9 +90,12 @@ export default async (req, res) => {
 
 
   try {
+    const executablePath = chromium.executablePath
     const browser = await puppeteer.launch({
-      executablePath: '/path/to/chromium',
+      args: chromium.args,
+      executablePath
     });
+
     const page = await browser.newPage();
     await page.setContent(EmailDocTemplate);
     const pdfBuffer = await page.pdf();
