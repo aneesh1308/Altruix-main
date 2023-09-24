@@ -4,6 +4,7 @@ import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 import EventCard from '../components/event/EventGenral';
 import Form from '@/components/forms/Forms';
+import Button from '../components/button/Button';
 
 function About() {
   return (

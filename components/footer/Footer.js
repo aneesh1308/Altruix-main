@@ -5,7 +5,7 @@ import Styles from './Footer.module.css';
 function Footer() {
   return (
     <footer className= "container-70">
-      <div className="py-12 mt-20 sm:mt-4 md:mt-12">
+      <div className="mt-8 sm:mt-4 md:mt-12">
         <BottomGlitter text="Get In Touch" />
       </div>
 
@@ -104,7 +104,7 @@ function Footer() {
                     target="_blank"
                     rel="noreferrer"
                   ><h6 className="flex items-center">
-                  Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Artificial-inteL Hub </h6></a>
+                  Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Alpha Developers</h6></a>
             {/* </h6> */}
           </div>
         </div>

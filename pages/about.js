@@ -38,9 +38,9 @@ function About() {
               </div>
               <div className='ml-16 sm:mb-8 sm:ml-0 md:mb-8 md:ml-0 lg:mb-8 lg:ml-0 xl:mt-8 xl:ml-0 2xl:mt-8 2xl:ml-0'>
                 <EventCard
-                  title="BIT Code"
-                  description="A Monthly event of coding contest based on algorithms, data structures, and problem solving."
-                  bgImage="/events/bitcode.jpg"
+                  title="SRM VALLIAMMAI ENGINEERING COLLEGE"
+                  description="Institutions for privileged Learning"
+                  bgImage="/gallery/mobile/srm.webp"
                 />
               </div>
             </div>
@@ -68,41 +68,15 @@ function About() {
               </div>
               <div className='ml-16 sm:mb-8 sm:ml-0 md:mb-8 md:ml-0 lg:mb-8 lg:ml-0 xl:mt-8 xl:ml-0 2xl:mt-8 2xl:ml-0'>
                 <EventCard
-                  title="BIT Code"
+                  title="Artifical Intelligence & Data Science"
                   description="A Monthly event of coding contest based on algorithms, data structures, and problem solving."
-                  bgImage="/events/bitcode.jpg"
-                  link="https://contest.hnccbits.com/"
+                  bgImage="/gallery/mobile/ai.webp"
                 />
               </div>
             </div>
           </div>
         
 
-        </div>
-        <div className="mt-28 mb-6 sm:mt-8 sm:mb-4">
-          <BottomGlitter text="About AltruIx" />
-          <div className="department">
-            <div className="flex 2xl:flex-col xl:flex-col lg:flex-col-reverse md:flex-col-reverse sm:flex-col-reverse mt-6">
-                <div className="w-4/6 sm:w-full md:w-full lg:full xl:w-full 2xl:w-full"> 
-                  <p className="text-lg text-sky-400 !important">
-                    AltruIx, our eagerly anticipated symposium, is set to captivate minds on October 7th. 
-                    This dynamic event combines the best of technology and creativity, featuring two 
-                    exhilarating technical competitions, "Code N Tackle" and "Tech Fusion," designed to 
-                    challenge and inspire. For those seeking a break from the digital realm, our non-technical 
-                    offerings include "Film Fiesta" and "Caught Adrift." Additionally, "Techno Think" provides 
-                    a platform for innovators to showcase their projects. Join us for a day of exploration,
-                    collaboration, and celebration at AltruIx!
-                  </p>
-                </div>
-                <div className='ml-16 sm:mb-8 sm:ml-0 md:mb-8 md:ml-0 lg:mb-8 lg:ml-0 xl:mt-8 xl:ml-0 2xl:mt-8 2xl:ml-0'>
-                  <EventCard
-                    title="BIT Code"
-                    description="A Monthly event of coding contest based on algorithms, data structures, and problem solving."
-                    bgImage="/events/bitcode.jpg"
-                  />
-                </div>
-              </div>
-            </div>
         </div>
         <Events />
       </section>

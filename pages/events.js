@@ -110,7 +110,7 @@ function EventBox({ title, description, src, link, id }) {
       <svg width="0" height="0">
         <defs>
           <clipPath id={id} clipPathUnits="objectBoundingBox">
-            <circle
+            <circle 
               cx="0.5"
               cy="1.2"
               r="0"
@@ -137,7 +137,7 @@ function EventBox({ title, description, src, link, id }) {
 
       <div className={styles.contentWrapper}>
         <div className={styles.content}>
-          <h2 className="text-5xl font-bold sm:text-3xl">{title}</h2>
+          <h2 className="text-5xl font-bold sm:text-3xl text-aneesh">{title}</h2>
           <p className="text-xl leading-normal sm:text-lg sm:font-light">
             {description}
           </p>
@@ -146,7 +146,7 @@ function EventBox({ title, description, src, link, id }) {
             className="flex w-[fit-content] rounded-full"
             rel="noreferrer"
           >
-            <Button>
+            <Button className='bg-aneesh'>
               <span className="z-50 block">View More</span>
             </Button>
           </a>
