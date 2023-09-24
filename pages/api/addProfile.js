@@ -88,45 +88,40 @@ export default async (req, res) => {
   });
 
 
-  // const browser = await puppeteer.launch({ defaultViewport: null,
-  //   headless: true,
-  //   args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  // });
-  // const page = await browser.newPage();
-  // await page.setContent(EmailDocTemplate);
-  // const pdfBuffer = await page.pdf();
-  // await browser.close();
+  try {
+    const browser = await puppeteer.launch({
+      executablePath: '/path/to/chromium',
+    });
+    const page = await browser.newPage();
+    await page.setContent(EmailDocTemplate);
+    const pdfBuffer = await page.pdf();
+    await browser.close();
+  } catch (error) {
+    return res.status(201).json({ message: error});
+  }
 
-    let options = { format: 'A4' };
-    htmlToPdf.generatePdf(EmailDocTemplate, options)
-    .then(pdfBuffer => {
-
-      return res.status(201).json({ message: "Detail pdf successfully!!"});
-
-      const mailDetails = {
-        from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
-        to: savedProfile.email, // Replace with the recipient's email address
-        subject: 'Successfully register Altruix',
-        text: 'ticket as been attached with the mail kindly download it.',
-        html: compiledEmailTemplate,
-        attachments: [
-          {
-            filename: 'ticket.pdf',
-            content: pdfBuffer,
-          },
-        ]
-      };
-      
-      mailTransporter.sendMail(mailDetails, (err, info) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(info);
-        }
-      });
-    })
-
-    // Define the email content
+   
+    const mailDetails = {
+      from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
+      to: savedProfile.email, // Replace with the recipient's email address
+      subject: 'Successfully register Altruix',
+      text: 'ticket as been attached with the mail kindly download it.',
+      html: compiledEmailTemplate,
+      attachments: [
+        {
+          filename: 'ticket.pdf',
+          content: pdfBuffer,
+        },
+      ]
+    };
+    
+    await mailTransporter.sendMail(mailDetails, (err, info) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(info);
+      }
+    });
     
     
     
