@@ -115,7 +115,7 @@ export default async (req, res) => {
         }
       });
     } catch (error) {
-      console.error('Synchronous error:', error);
+      return res.status(201).json({ message: "mail not sended" });
     }
     
     
