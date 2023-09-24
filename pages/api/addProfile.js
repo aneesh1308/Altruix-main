@@ -109,13 +109,7 @@ export default async (req, res) => {
     };
     try {
       // Attempt to send the email
-      mailTransporter.sendMail(mailDetails, (error, info) => {
-        if (error) {
-          return res.status(201).json({ message: "mail not sended" });
-        } else {
-          return res.status(201).json({ message: "mail sended" });
-        }
-      });
+      mailTransporter.sendMail(mailDetails);
     } catch (error) {
       return res.status(201).json({ message: "mail not sended" });
     }
