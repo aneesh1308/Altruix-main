@@ -68,12 +68,13 @@ export default function ContactForm() {
       ...formData,
       "eventInterest": selectedOptionTexts,
     });
-
+    const newData = {
+      ...formData,
+      "eventInterest": selectedOptionTexts,
+    }
+    
     axios
-      .post("/api/addProfile", {
-        ...formData,
-        "eventInterest": selectedOptionTexts,
-      }) 
+      .post("/api/addProfile", newData) 
       .then((response) => {
         console.log(response.data)
         router.push(`/profile/${response.data.data._id}`);
