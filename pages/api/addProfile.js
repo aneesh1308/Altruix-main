@@ -101,9 +101,19 @@ export default async (req, res) => {
         },
       ]
     };
-    mailTransporter.sendMail(mailDetails).catch((err) =>{
-      return res.status(500).json({ error: 'problem with mailer' });
-    });
+    try {
+      // Attempt to send the email
+      mailTransporter.sendMail(mailDetails, (error, info) => {
+        if (error) {
+          console.error('Error sending email:', error);
+        } else {
+          console.log('Email sent successfully:', info.response);
+        }
+      });
+    } catch (error) {
+      console.error('Synchronous error:', error);
+    }
+    
     
       return res.status(201).json({ message: "Detail Added successfully!!" ,data :savedProfile});
     } catch (err) {
