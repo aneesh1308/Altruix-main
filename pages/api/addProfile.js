@@ -75,10 +75,12 @@ export default async (req, res) => {
       _id:savedProfile._id,
       createdAt:savedProfile.createdAt
   };
-
+console.log(emailData)
   const compiledEmailTemplate = await emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
     return emailData[key] || match;
 });
+console.log(compiledEmailTemplate)
+
 
   // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
   //   return emailData[key] || match;
