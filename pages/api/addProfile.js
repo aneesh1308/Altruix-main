@@ -54,13 +54,18 @@ export default async (req, res) => {
     // const decodedPayload = jwt.decode(token, process.env.JWT_KEY);
     // console.log('Decrypted (JWT):', decodedPayload.data);
 
-    let mailTransporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: "altruix2k23@gmail.com",
-        pass: "mjnaxbetzmvqzmup"
-      }
-    });
+    try {
+      let mailTransporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: "altruix2k23@gmail.com",
+          pass: "mjnaxbetzmvqzmup"
+        }
+      });
+    return res.status(201).json({ message: "mail test  sended" });
+    } catch(err){
+      return res.status(201).json({ message: "mail test not sended" });
+    }
     const emailData = {
       name: savedProfile.Name,
       profilePath: 'https://altruix2k23.tech/profile/'+savedProfile._id,
