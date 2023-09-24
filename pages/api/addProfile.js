@@ -82,11 +82,15 @@ export default async (req, res) => {
     return emailData[key] || match;
   });
 
-  const browser = await puppeteer.launch();
+  try{
+    const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.setContent(EmailDocTemplate);
   const pdfBuffer = await page.pdf();
   await browser.close();
+  } catch(err) {
+    console.error('Synchronous error:', error);
+  }
     // Define the email content
     const mailDetails = {
       from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
