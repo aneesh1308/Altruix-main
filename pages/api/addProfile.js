@@ -82,19 +82,17 @@ export default async (req, res) => {
 
 
 
-  // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
-  //   return emailData[key] || match;
-  // });
+  const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
+    return emailData[key] || match;
+  });
 
-  // try{
-  //   const browser = await puppeteer.launch();
-  // const page = await browser.newPage();
-  // await page.setContent(EmailDocTemplate);
-  // const pdfBuffer = await page.pdf();
-  // await browser.close();
-  // } catch(err) {
-  //   console.error('Synchronous error:', error);
-  // }
+
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.setContent(EmailDocTemplate);
+  const pdfBuffer = await page.pdf();
+  await browser.close();
+ 
     // Define the email content
     const mailDetails = {
       from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
@@ -102,12 +100,12 @@ export default async (req, res) => {
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
       html: compiledEmailTemplate,
-      // attachments: [
-      //   {
-      //     filename: 'ticket.pdf',
-      //     content: pdfBuffer,
-      //   },
-      // ]
+      attachments: [
+        {
+          filename: 'ticket.pdf',
+          content: pdfBuffer,
+        },
+      ]
     };
     await new Promise((resolve, reject) => {
       mailTransporter.sendMail(mailDetails, (err, info) => {
