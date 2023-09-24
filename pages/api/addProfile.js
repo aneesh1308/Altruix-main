@@ -97,7 +97,7 @@ export default async (req, res) => {
 
    
     const mailDetails = {
-      from: 'ALTRUIX <'+ process.env.MAIL_ID+'>',
+      from: 'ALTRUIX <'+ 'altruix2k23@gmail.com'+'>',
       to: savedProfile.email, // Replace with the recipient's email address
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
