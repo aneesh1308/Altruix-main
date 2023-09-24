@@ -72,7 +72,7 @@ export default function ContactForm() {
       ...formData,
       "eventInterest": selectedOptionTexts,
     }
-    
+    console.log(newData)
     axios
       .post("/api/addProfile", newData) 
       .then((response) => {
