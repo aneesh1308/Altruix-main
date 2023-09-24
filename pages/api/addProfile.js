@@ -76,9 +76,9 @@ export default async (req, res) => {
       createdAt:savedProfile.createdAt
   };
 
-  const compiledEmailTemplate = emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
-      return emailData[key] || match;
-  });
+  const compiledEmailTemplate = await emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
+    return emailData[key] || match;
+});
 
   // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
   //   return emailData[key] || match;
