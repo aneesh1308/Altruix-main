@@ -76,9 +76,9 @@ export default async (req, res) => {
       createdAt:savedProfile.createdAt
   };
 
-  // const compiledEmailTemplate = emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
-  //     return emailData[key] || match;
-  // });
+  const compiledEmailTemplate = emailTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
+      return emailData[key] || match;
+  });
 
   // const EmailDocTemplate = AttachTemplate.replace(/{{\s*(\w+)\s*}}/g, (match, key) => {
   //   return emailData[key] || match;
@@ -99,13 +99,13 @@ export default async (req, res) => {
       to: savedProfile.email, // Replace with the recipient's email address
       subject: 'Successfully register Altruix',
       text: 'ticket as been attached with the mail kindly download it.',
-      // html: compiledEmailTemplate,
-      // attachments: [
-      //   {
-      //     filename: 'ticket.pdf',
-      //     content: pdfBuffer,
-      //   },
-      // ]
+      html: compiledEmailTemplate,
+      attachments: [
+        {
+          filename: 'ticket.pdf',
+          content: pdfBuffer,
+        },
+      ]
     };
     await new Promise((resolve, reject) => {
       mailTransporter.sendMail(mailDetails, (err, info) => {
