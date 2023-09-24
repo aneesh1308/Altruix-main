@@ -46,6 +46,7 @@ export default async (req, res) => {
         collegeRegistrationNumber: req.body.collegeRegistrationNumber,
         eventInterest: req.body.eventInterest,
       });
+    console.log(newProfile);
     const savedProfile = await newProfile.save();
     
     const jsonString = JSON.stringify(savedProfile._id);
@@ -58,8 +59,8 @@ export default async (req, res) => {
     let mailTransporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.MAIL_ID,
-        pass: process.env.MAIL_PASS
+        user: "altruix2k23@gmail.com",
+        pass: "mjnaxbetzmvqzmup"
       }
     });
     console.log("mailTransporter",mailTransporter);
