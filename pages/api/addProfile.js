@@ -113,6 +113,7 @@ export default async (req, res) => {
           console.error(err);
           reject(err);
         } else {
+          console.log("err");
           resolve(info);
         }
       });
