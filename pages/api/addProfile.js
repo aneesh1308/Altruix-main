@@ -107,14 +107,16 @@ export default async (req, res) => {
       //   },
       // ]
     };
-
-      mailTransporter.sendMail(mailDetails, (error, info) => {
-        if (error) {
-          return res.status(201).json({ message: "mail not sended" });
+    await new Promise((resolve, reject) => {
+      mailTransporter.sendMail(mailDetails, (err, info) => {
+        if (err) {
+          console.error(err);
+          reject(err);
         } else {
-          return res.status(201).json({ message: "mail sended" });
-        }
-      });
+          resolve(info);
+        }
+      });
+    });
     
     
       return res.status(201).json({ message: "Detail Added successfully!!" ,data :savedProfile});
