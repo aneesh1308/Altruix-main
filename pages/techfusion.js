@@ -17,7 +17,7 @@ function About() {
       </Head>
       <section className="container mx-auto px-16 sm:px-4 pt-4 md:pt-16 sm:pt-12">
         <div className="my-16 w-full text-center">
-          <BottomGlitter h2="Tech Fushion" />
+          <BottomGlitter h2="Tech Fusion" />
           <h2 className="text-xl mt-3">
             <BottomGlitter p="Tech Fusion Quest: Where Knowledge Meets the Unexpected" />
           </h2>
@@ -41,7 +41,7 @@ function About() {
                 team and brace yourselves for a challenge that will take your combined expertise 
                 to decode and conquer.Participants will face an exciting challenge that will put 
                 their coding skills to the test. They will be presented with a series of coding questions 
-                that span various difficulty levels, ranging from beginner to advanced.. The fusion of knowledge awaits!
+                that span various difficulty levels, ranging from beginner to advanced. The fusion of knowledge awaits!
                 </p>
                 <BottomGlitter p="Round 2 : The Surprise Technical Round" />
                 <p className="px-8 py-4 text-xl text-sky-400 !important">
@@ -53,6 +53,13 @@ function About() {
                 It's an adrenaline-pumping experience that will ignite your creativity and 
                 problem-solving abilities.
                 </p>
+
+                <BottomGlitter p="Contact:" />
+
+                  <ul className="px-8 py-3 text-xl list-disc p-5">
+                    <li>Lakshmi Narayanan M - 6374210052</li>
+                    <li>Chiranjeevi M - 9443258766</li>
+                  </ul>
                 <a
                   href="/forms"
                   className="flex pt-8 w-[fit-content] rounded-full"

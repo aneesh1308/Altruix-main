@@ -49,7 +49,7 @@ function About() {
                 <BottomGlitter p="Round 2: Quiz Burst " />
                 <ul className="px-8 py-2 text-lg list-disc p-5">
                   <li>
-                    The 16 participants are divided into 2 groups of 8 each A
+                    The 16 participants are divided into 2 groups of 8 each. A
                     technical quiz is displayed on the screen, visible to all
                     participants.(total question:5)
                   </li>
@@ -69,6 +69,12 @@ function About() {
                     selected as the winner.
                   </li>
                 </ul>
+                <BottomGlitter p="Contact:" />
+
+                  <ul className="px-8 py-3 text-xl list-disc p-5">
+                    <li>Sanjana Babu - 8667574271</li>
+                    <li>Yuvarani K - 8825446345</li>
+                  </ul>
 
                 <a
                   href="/forms"

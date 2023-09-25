@@ -54,7 +54,7 @@ function About() {
           <div className="flex 2xl:flex-col xl:flex-col lg:flex-col-reverse md:flex-col-reverse sm:flex-col-reverse mt-6">
               <div className="w-4/6 sm:w-full md:w-full lg:full xl:w-full 2xl:w-full">
                 <p className="text-lg text-sky-400 !important">
-                  Bachlore of technology in Artificial Intelligence and Data Science that is a
+                  Bachelor of technology in Artificial Intelligence and Data Science that is a
                   blend of Artificial Intelligence and Data Science designed to develop a basic
                   understanding of problem-solving, knowledge representation, reasoning, and learning
                   methods of AI. This course enables the students to develop their skillset to do

@@ -48,7 +48,7 @@ function Footer() {
                     Instagram
                   </a>
                   <a
-                    href="https://www.instagram.com/altruix_2k23/"
+                    href="https://www.facebook.com/profile.php?id=61551360785090"
                     className="block pl-1 text-lg my-1 font-extralight"
                     target="_blank"
                     rel="noreferrer"
@@ -56,12 +56,20 @@ function Footer() {
                     Facebook
                   </a>
                   <a
-                    href="https://www.instagram.com/altruix_2k23/"
+                    href="http://linkedin.com/in/altruix-x-b0b9a5292"
                     className="block pl-1 text-lg my-1 font-extralight"
                     target="_blank"
                     rel="noreferrer"
                   >
                     LinkedIn
+                  </a>
+                  <a 
+                    href="https://twitter.com/altruix2k23"
+                    className="block pl-1 text-lg my-1 font-extralight"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Twitter
                   </a>
                   <a 
                     href="mailto:altruix2k23@gmail.com"
@@ -71,6 +79,7 @@ function Footer() {
                   >
                     altruix2k23@gmail.com
                   </a>
+                  
               </div>
             </div>
           </div>

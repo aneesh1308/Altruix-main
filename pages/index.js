@@ -8,6 +8,7 @@ import TechStack from '../components/techStack/TechStack';
 import Video from '../components/video/Video';
 import CountdownTimer from '../components/CountDown/CountDownTimer';
 
+
 export default function Home() {
   return (
     <Screen>

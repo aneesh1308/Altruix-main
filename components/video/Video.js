@@ -45,7 +45,7 @@ function Video() {
       {documentWidth >= 600 && (
         <div id="videoContainer" className={styles.designVideoContainer}>
           <video
-            src="/video/wolf.mp4"
+            src="/video/wolf_video2.mp4"
             autoPlay
             muted
             loop

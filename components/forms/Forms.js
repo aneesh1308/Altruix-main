@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import BottomGlitter from "../StyledText/BottomGlitter";
 import axios from "axios";
 import Button from '../button/Button';
-
+import './Forms.module.css';
 const selectableList = [
   { text: 'Code N Tackle', value: 1 },
   { text: 'Tech Fusion', value: 2 },
@@ -17,8 +17,16 @@ const selectableList = [
 const customStyles = {
   option: (provided) => ({
     ...provided,
+
     color: 'hsl(5, 100%, 60%)',
     background: 'black', // Set the desired text color
+    
+  }),
+  dropdownIndicator: (provided) => ({
+    ...provided,
+    '& svg': {
+      fill: 'black', // Set the color you want for the drop arrow
+    },
   }),
 };
 
@@ -36,7 +44,7 @@ export default function ContactForm() {
   const [formData,setFormData] = useState(initialFormData)
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
-  const [Registered,SetRegistered] = useState(false);
+  const [Registered,SetRegistered] = useState(true);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +66,7 @@ export default function ContactForm() {
  
   const handleSubmit = (e) => {
     e.preventDefault();
-    SetRegistered(true)
+    SetRegistered(false)
     
     const selectedOptionTexts = selectedOptions.map((option) =>
       selectableList.find((item) => item.value === option.value)?.text
@@ -85,18 +93,18 @@ export default function ContactForm() {
     <>
     <div className="flex flex-col items-center">
       <div className='flex flex-col items-center mt-8'>
-              <div className="sm:mt-12 mt-16">
+              <div className="sm:mt-12 mt-16 px-4">
                 <BottomGlitter text="Techno Think Event" />
               </div>
               <Link href="https://docs.google.com/forms/d/1Rd8EpOmK3aw91d74NnFG0soiV-46Wov8t3W_KbPb6v4/edit">
                 <a className="rounded-full">
-                  <Button className="bg-aneesh mt-8">
+                  <Button className="bg-aneesh mt-8 ">
                     <span className="z-50 block">Register</span>
                   </Button>
                 </a>
               </Link>
       </div>
-      <div className="sm:mt-12 mt-16">
+      <div className="sm:mt-12 mt-16 px-4 ">
         <BottomGlitter text="Registration For Other Events" />
       </div>
       <div className="w-3/5 sm:w-5/6 lg:w-4/5 lg:p-8 xl:w-4/5 sm:p-4 p-16 sm:mt-12 mt-24 bg-aneesh rounded-lg" >
@@ -203,11 +211,20 @@ export default function ContactForm() {
               className="p-4 bg-primary text-aneesh text-xl rounded-bl-lg rounded-tr-lg"
             />
         </div>
-        <button
+        {
+          Registered?
+          <button
           type="submit"
           className="text-center px-4 py-2 w-40 bg-primary text-2xl text-aneesh font-medium mt-4 rounded-bl-lg rounded-tr-lg">
           Register
-        </button>
+        </button>:
+        <button
+        type="submit"
+        disabled="true"
+        className="text-center px-4 py-2 w-40 bg-primary text-2xl text-aneesh font-medium mt-4 rounded-bl-lg rounded-tr-lg">
+        Redirecting....
+      </button>
+        }
       </form>
       </div>
       </div>

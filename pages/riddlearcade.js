@@ -37,7 +37,7 @@ function About() {
                 </p>
                 <BottomGlitter p="Round 2: GuessWhiz (15 mins per batch)" />
                 <p className="px-8 py-4 text-lg text-sky-400 !important">
-                  Are you a master of deduction? In the this Challenge, one
+                  Are you a master of deduction? In this Challenge, one
                   member of your team will become the Akinator. Their mission?
                   To guess the famous personality or celebrity assigned to them
                   by the event organizers. The catch? They can only ask yes or
@@ -64,9 +64,15 @@ function About() {
                     grylls”.
                   </li>
                   <li>
-                    Prizes await the most enigmatic and resourceful teams. .
+                    Prizes await the most enigmatic and resourceful teams. 
                   </li>
                 </ul>
+                <BottomGlitter p="Contact:" />
+
+                  <ul className="px-8 py-3 text-xl list-disc p-5">
+                    <li>ajaiysuriya - 7871871816</li>
+                    <li>Ramya A - 8939470605</li>
+                  </ul>
                 <a
                   href="/forms"
                   className="flex pt-8 w-[fit-content] rounded-full"

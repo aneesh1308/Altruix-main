@@ -30,7 +30,7 @@ function About() {
                 </p>
                 <BottomGlitter p="Round 1: Grab the Snaps  (30 mins per batch)" />
                 <p className="px-8 py-4 text-lg text-sky-400 !important">
-                  Every film is built around core elements that give it its
+                  Every film is built around core elements that give its
                   unique identity. Whether it’s a signature prop, a specific
                   setting, or a unique character trait, these elements become
                   synonymous with the movie itself. In Grab the Snaps,
@@ -40,18 +40,34 @@ function About() {
                   prepare to prove it in this round!
                 </p>
                 <BottomGlitter p="Round 2: Rythmic Riddles (15 mins per batch)" />
-                <p className="px-8 py-4 text-lg text-sky-400 !important">
-                  participants will be played an interlude or background music
-                  (BGM) from a film. The catch? Identify the song or the movie
-                  it hails from. Each song snippet will be played a maximum of
-                  two times.
-                </p>
+                <ul className="px-8 py-3 text-lg list-disc p-5">
+                    <li>
+                    Participants will be played an interlude or background music
+                  (BGM) from a film.
+                    </li>
+                    <li>
+                    The catch? Identify the song or the movie
+                  it hails from.
+                    </li>
+                    <li>
+                    Each song snippet will be played a maximum of
+                      two times.
+                    </li>
+                  
+                  </ul>
+
                 <BottomGlitter p="Round 3:  Freeze Frame (Finals)" />
                 <p className="px-8 py-4 text-lg text-sky-400 !important">
-                  participants will be shown frames or stills from movies. Your
+                  Participants will be shown frames or stills from movies. Your
                   challenge is to identify the movie based solely on that still
                   shot.
                 </p>
+                <BottomGlitter p="Contact:" />
+
+                  <ul className="px-8 py-3 text-xl list-disc p-5">
+                    <li>Sanjay A - 7305838751</li>
+                    <li>Shivasurya S T - 9789067337</li>
+                  </ul>
                 <a
                   href="/forms"
                   className="flex pt-8 w-[fit-content] rounded-full"

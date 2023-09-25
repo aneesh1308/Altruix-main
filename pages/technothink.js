@@ -12,7 +12,7 @@ function About() {
           <div className="my-16 sm:my-4 w-full text-center">
             <BottomGlitter h2="Techno Think " />
             <h2 className="text-xl mt-3">
-              <BottomGlitter p=" Techno Think where imagination meets algorithm" />
+              <BottomGlitter p="Where Imagination meets Algorithm" />
             </h2>
             <p className="px-8 py-2 text-lg text-sky-400 !important">
               Techno Think is an exciting and dynamic event that brings together
@@ -66,23 +66,30 @@ function About() {
                       explained in depth.
                     </li>
                     <li>
-                      Other teams in the group give a problem statement based on
-                      your project, it can be a enhancement in project.
+                      Other teams in the group will provide a problem statement based on
+                      your project, which can be an enhancement to the project.
                     </li>
                     <li>
-                      You have to give a problem solution and satisfy other
+                      You have to provide a problem solution and ensure satisfies the other
                       teams in the group.
                     </li>
-                    <li>Top three teams are decided by the judges.</li>
+                    <li>Top three teams will be decided by judges.</li>
                   </ul>
                   <BottomGlitter p="Theme:" />
 
                   <ul className="px-8 py-3 text-xl list-disc p-5">
                     <li>Automation</li>
-                    <li>Network & Security.</li>
+                    <li>Network & Security</li>
                     <li>Internet of Things</li>
                     <li>Agriculture</li>
                     <li>Healthcare</li>
+                  </ul>
+
+                  <BottomGlitter p="Contact:" />
+
+                  <ul className="px-8 py-3 text-xl list-disc p-5">
+                    <li>Thrisha P S - 9789501581</li>
+                    <li>Akash J - 7871632923</li>
                   </ul>
                   <a
                     href="/forms"
