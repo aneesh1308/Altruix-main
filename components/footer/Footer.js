@@ -108,7 +108,7 @@ function Footer() {
             {/* <h6 className="flex items-center"> */}
               {/* Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by Artificial-inteL Hub  */}
               <a 
-                    href="mailto:projectpeee1234@gmail.com"
+                    href="mailto:alphadevtech07@gmail.com"
                     className="block pl-1 text-lg my-1 font-extralight"
                     target="_blank"
                     rel="noreferrer"

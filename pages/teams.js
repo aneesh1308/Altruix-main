@@ -52,7 +52,7 @@ function Teams() {
         </div>
         <h2 className={Styles.postHead}><BottomGlitter h2="Committee Heads" /></h2>
         <div className={Styles.cardContainer}>
-          {Symposium.slice(10, 22).map((item, index) => {
+          {Symposium.slice(10, 24).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}

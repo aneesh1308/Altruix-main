@@ -34,12 +34,18 @@ function ProfilePage() {
           content="User Profile"
         />
       </Head>
-      {userData ? (
-        <Profile profileData={userData} />
-      ) : (
-        <p>Loading...</p>
-      )}
-    </Screen>
+        {userData ? (
+          
+          <div className="flex justify-center items-center min-h-screen ">
+
+          <Profile profileData={userData} />
+          </div>
+        ) : (
+          <p>Loading...</p>
+
+        )}
+
+      </Screen>
   );
 }
 

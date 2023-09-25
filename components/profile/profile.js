@@ -20,11 +20,11 @@ function Profile({ profileData }) {
     });
   
   return (
-    <div  className="mx-auto">
-      <div id='profile-container' className="container m2lg:w-[500px] mx-auto">
-        <div  className="flex">
-          <div   className="flex-1">
-            <div  style={{height:'100%'}} className="shadow mr-8">
+    <div  className="flex items-center ">
+      <div id='profile-container' className="container ">
+        <div  className="flex sm:w-[400px] m2lg:w-[500px]  ">
+          <div   className="flex-1 ">
+            <div  style={{height:'100%'}} className="shadow">
               <div ref={conponentPDF} className="bg-primary  px-6 py-6 pb-0 border-4 border-green">
                 <div className="flex mb-4 md:mb-0 justify-between items-center">
                   <span className="bg-green px-4 py-3 text-white text-sm rounded-full font-semibold"></span>
@@ -36,6 +36,8 @@ function Profile({ profileData }) {
                   </span>
                 </div>
                 <br />
+                <div className="text-grey-darker mb-4 text-red">Download Your ticket or take screen shot!!</div>
+                <br/>
                 <div>
                   {qrCodeData && (
                     <div className="text-center">

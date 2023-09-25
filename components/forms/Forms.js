@@ -93,7 +93,7 @@ export default function ContactForm() {
     <>
     <div className="flex flex-col items-center">
       <div className='flex flex-col items-center mt-8'>
-              <div className="sm:mt-12 mt-16 px-4">
+              <div className="sm:mt-12 mt-16 px-12">
                 <BottomGlitter text="Techno Think Event" />
               </div>
               <Link href="https://docs.google.com/forms/d/1Rd8EpOmK3aw91d74NnFG0soiV-46Wov8t3W_KbPb6v4/edit">
@@ -104,7 +104,7 @@ export default function ContactForm() {
                 </a>
               </Link>
       </div>
-      <div className="sm:mt-12 mt-16 px-4 ">
+      <div className="sm:mt-12 mt-16 px-12 ">
         <BottomGlitter text="Registration For Other Events" />
       </div>
       <div className="w-3/5 sm:w-5/6 lg:w-4/5 lg:p-8 xl:w-4/5 sm:p-4 p-16 sm:mt-12 mt-24 bg-aneesh rounded-lg" >
@@ -225,6 +225,12 @@ export default function ContactForm() {
         Redirecting....
       </button>
         }
+        <h3 className='text-2xl mt-8 text-primary font-semibold'>If any queries in registration, 
+          <br/>
+          contact - altruix2k23@gmail.com
+          <br/>
+          contact - +91 9486985820
+        </h3>
       </form>
       </div>
       </div>

@@ -58,8 +58,8 @@ export default async (req, res) => {
       let mailTransporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: "altruix2k23@gmail.com",
-          pass: "mjnaxbetzmvqzmup"
+          user: "aisymdes@gmail.com",
+          pass: "ftxtonffuqwehszw"
         }
       });
    

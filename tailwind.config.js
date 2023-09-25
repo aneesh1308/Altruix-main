@@ -19,7 +19,8 @@ module.exports = {
         DEFAULT: "#FFED79",
         light: "#FFA776",
       },
-      aneesh: "hsl(5, 100%, 60%)"
+      aneesh: "hsl(5, 100%, 60%)",
+      red: "#FF370D"
     },
 		screens: {
       'm2xl': { min: '1500px' },
